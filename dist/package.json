@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../node_modules/ng-packagr/package.schema.json",
+  "name": "ng-alt",
+  "version": "0.0.1",
+  "main": "bundles/ng-alt.umd.js",
+  "module": "esm5/ng-alt.js",
+  "es2015": "esm2015/ng-alt.js",
+  "typings": "ng-alt.d.ts",
+  "metadata": "ng-alt.metadata.json",
+  "dependencies": {
+    "tslib": "^1.7.1"
+  }
+}
