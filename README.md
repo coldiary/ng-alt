@@ -1,4 +1,5 @@
 # NgAlt
+![Build](https://travis-ci.org/coldiary/ng-alt.svg?branch=master)
 
 An Angular directive used the same way as [@NgSwitch](https://angular.io/api/common/NgSwitch) except that it only renders the first truthy directive in the group :
 
