@@ -1,10 +1,6 @@
 import { Directive, Input, TemplateRef, ViewContainerRef, Host } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-import { Subscription } from 'rxjs/Subscription';
-import "rxjs/add/observable/of";
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/mergeMap';
+import { of as observableOf, Subject, Subscription } from 'rxjs';
+import { filter, flatMap } from 'rxjs/operators';
 
 export interface ViewState {
   view: NgAltDirective;
@@ -52,8 +48,11 @@ export class NgAltDirective {
   ngOnInit() {
     this.ngAltGroup.addAlternative(this);
     this.sub = this.ngAltGroup.state
-      .filter(states => states.some(state => state.view === this))
-      .flatMap(states => Observable.of(states.filter(state => state.view === this)[0]))
+      .asObservable()
+      .pipe(
+        filter(states => states.some(state => state.view === this)),
+        flatMap(states => observableOf(states.filter(state => state.view === this)[0]))
+      )
       .subscribe(state => this.updateState(state));
   }
 

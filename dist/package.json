@@ -3,11 +3,16 @@
   "name": "ng-alt",
   "version": "0.0.2",
   "main": "bundles/ng-alt.umd.js",
-  "module": "esm5/ng-alt.js",
-  "es2015": "esm2015/ng-alt.js",
+  "module": "fesm5/ng-alt.js",
+  "es2015": "fesm2015/ng-alt.js",
+  "esm5": "esm5/ng-alt.js",
+  "esm2015": "esm2015/ng-alt.js",
+  "fesm5": "fesm5/ng-alt.js",
+  "fesm2015": "fesm2015/ng-alt.js",
   "typings": "ng-alt.d.ts",
   "metadata": "ng-alt.metadata.json",
+  "sideEffects": false,
   "dependencies": {
-    "tslib": "^1.7.1"
+    "tslib": "^1.9.0"
   }
 }

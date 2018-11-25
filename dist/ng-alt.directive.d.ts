@@ -1,9 +1,5 @@
 import { TemplateRef, ViewContainerRef } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
-import { Subscription } from 'rxjs/Subscription';
-import "rxjs/add/observable/of";
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/mergeMap';
+import { Subject, Subscription } from 'rxjs';
 export interface ViewState {
     view: NgAltDirective;
     cond: boolean;

@@ -25,7 +25,7 @@ Exemple with form errors:
     <mat-error ngAltGroup>
       <span *ngAlt="form.controls.email.hasError('required')">Must not be empty</span>
       <span *ngAlt="form.controls.email.hasError('minLength')" translate>Must be at least 8 chars long</span>
-      <span *ngAlt="form.controls.email.hasError('invalid')" translate>Must be contain symbols, digits and mixed upper and lower cased letters</span>
+      <span *ngAlt="form.controls.email.hasError('invalid')" translate>Must contain symbols, digits and mixed upper and lower cased letters</span>
     </mat-error>
   </mat-input-container>
 ```
@@ -91,4 +91,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ### Copyright
 
 This project is covered by an MIT license. Refer to the LICENSE file.
-
